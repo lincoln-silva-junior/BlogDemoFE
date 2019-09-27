@@ -1,0 +1,28 @@
+<h5>
+    Criar / Editar Categoria
+</h5>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <label for="idCategory">ID:</label>
+      <input type="text" name="idCategory" id="idCategory" 
+      [(ngModel)]="categoria.id"  class="form-control">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-12">
+      <label for="nameCategory">Nome:</label>
+      <input type="text" name="nameCategory" id="nameCategory" 
+      [(ngModel)]="categoria.name" class="form-control" (input)="onInput()">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-12">
+      <label for="descriptionCategory">Descrição:</label>
+      <input type="text" name="nameCategory" id="nameCategory" [(ngModel)]="categoria.description" class="form-control">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="container">
+  
+  <div class="row" style="margin-bottom: 15px; margin-top:10px;">
+      <button class="btn btn-primary" (click)="Cadastrar()">Novo</button>
+  </div>    
+  <div class="row">
+    <div class="col-md-12" *ngFor="let post of posts">    
+      
+      <h3>{{ post.title }}</h3>     
+
+      <div><h5>{{ post.body }}</h5></div>
+      
+    </div>   
+  </div>  
+</div>
+
+<app-modal #modalPostRegistration [title]="'Cadastro de Post'" [width]="'700px'" [visible]="false">
+
+    <div class="container">      
+      <form>
+        <div class="row" >            
+            <div class="col-md-6">     
+                <label for="txtTitle">Título:</label>             
+                <input type="text" name="txtTitle" id="txtTitle" class="form-control" />                  
+            </div>
+            <div class="col-md-6">
+                <!--select name="" id="" *ngFor="let cat of categories">
+                  <option value="cat.id">cat.name</option>
+                </select-->
+                <label for="txtCategory">Categoria:</label>             
+                <input type="text" name="txtCategory" id="txtCategory" class="form-control" />
+            </div>
+        </div>    
+        <div class="row">
+              <div class="col-md-12">
+                  <label for="txtPost">Post:</label>
+                  <textarea name="txtPost" id="txtPost" cols="85" rows="10"></textarea>
+              </div>                
+        </div>        
+      </form>    
+
+        
+        <!--table class="table table-striped" style="width:100%">
+          <thead>
+            <tr>
+              <th>Contratos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let obj of colContracts">
+              <td>{{obj.oldId}}</td>
+            </tr>
+          </tbody>
+        </table-->   
+        <hr>
+        <div class="row">
+          <input type="submit" value="Salvar" class="btn btn-primary">
+          <button class="btn btn-default" (click)="Cancelar()">Cancelar</button>
+        </div>
+    </div>
+
+
+   
+
+   
+
+  </app-modal>

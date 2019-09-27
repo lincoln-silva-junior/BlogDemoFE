@@ -1,0 +1,13 @@
+<p>
+  Lista de Usuários
+</p>
+<p>Página:{{ pagina }}</p>
+<div class="list-group">
+   
+  <a class="list-group-item list-group-item-action" *ngFor="let usuario of usuarios"
+    [routerLink]="['/users', usuario.id]">
+      {{ usuario.nome }}
+  </a>
+  
+</div>
+<button class="btn btn-primary" (click)="proximaPagina()">Próxima Página</button>
